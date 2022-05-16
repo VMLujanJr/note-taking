@@ -14,6 +14,10 @@ router.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, '../../public/notes.html'));
 });
 
+router.get('/assets/css/styles.css', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../public/assets/css/styles.css'));
+})
+
 // ... add a wildcard route to server.js (in case of a route that doesn't exist)
 router.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../../public/index.html'));

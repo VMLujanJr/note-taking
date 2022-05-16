@@ -29,7 +29,7 @@ const getNotes = () =>
   fetch('/api/notes', {
     method: 'GET',
     headers: {
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/json'
     },
   });
 
@@ -178,10 +178,8 @@ if (window.location.pathname === '/notes') {
   newNoteBtn.addEventListener('click', handleNewNoteView);
   noteTitle.addEventListener('keyup', handleRenderSaveBtn);
   noteText.addEventListener('keyup', handleRenderSaveBtn);
+ /*  noteList.addEventListener('click', '.list-group-item', handleNoteView);
+  noteList.addEventListener('click', '.delete-note', handleNoteDelete); */
 }
 
 getAndRenderNotes();
-
-module.exports = {
-  getNotes
-}

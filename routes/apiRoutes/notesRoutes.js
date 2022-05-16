@@ -1,16 +1,21 @@
 const router = require('express').Router();
-// import functions...
-/* const { noteList } = require('../../public/assets/js/index.js'); */
-/* const { notes } = require('../../db/db.json'); */
+const { createNewNote, deleteNote, readFile } = require('../../lib/notes.js');
+const { notes } = require('../../db/db.json');
 
 router.get('/notes', (req, res) => {
     let results = notes;
-
-    if (req.query) {
-        results = getNotes(req.query, results);
-    }
-
     res.json(results);
 });
+
+router.post('/notes', (req, res) => {
+    req.body.id = notes.length.toString();
+    let note = createNewNote(req.body, notes);
+    res.json(note);
+})
+
+router.delete('/notes/:id', (req, res) => {
+    deleteNote(notes, req.params.id);
+    res.json(notes);
+})
 
 module.exports = router;
