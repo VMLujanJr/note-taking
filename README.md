@@ -1,17 +1,17 @@
 ![MIT](https://img.shields.io/badge/License-MIT-blue)
-# Employee-Profile
+# Note Taking
 
 ## Description
 
-Welcome to the Employee-Profile project!
+Welcome to the Note Taking project!
 
-A Node.js command-line application that takes information about employees on a software engineering team and generates an HTML webpage that displays summarys for each person
+An application that allows a user to create, save, edit, and delete notes using API endpoints.
 
-You may visit the deployed [website](https://VMLujanJr.github.io/employee-profile/) to try it out for yourself!
+You may visit the deployed [website](https://VMLujanJr.github.io/note-taking/) to try it out for yourself!
 
 ## Table of Contents
 
-- [Employee-Profile](#employee-profile)
+- [Note Taking](#note-taking)
   - [Description](#description)
   - [Table of Contents](#table-of-contents)
   - [User Story](#user-story)
@@ -24,9 +24,6 @@ You may visit the deployed [website](https://VMLujanJr.github.io/employee-profil
   - [Tests](#tests)
   - [Questions](#questions)
   - [License](#license)
-  - [Extra Information](#extra-information)
-  - [Getting Started](#getting-started)
-  - [Bonus](#bonus)
 
 ## User Story
 
@@ -77,7 +74,14 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 ![mockup](./public/assets/images/mock-up.gif)
 
 ## Technologies
-HTML, CSS, Markdown, JavaScript, Node.js, Express
+| ID # | Technologies |
+| --- | --- |
+| 1 | HTML5 |
+| 2 | CSS3 |
+| 3 | Markdown |
+| 4 | JavaScript |
+| 5 | Node.js |
+| 6 | Express.js |
 
 ## Installation
 
@@ -99,7 +103,7 @@ Test
 
 If you have any questions, you may direct them to VMLujanJr using the following links:
 
-| Contact | Description |
+| | Description |
 | --- | --- |
 | Name | Victor |
 | Occupation | Developer |
@@ -129,46 +133,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-## Extra Information
-
-~~~
-.
-├── __tests__/             //jest tests
-│   ├── Employee.test.js
-│   ├── Engineer.test.js
-│   ├── Intern.test.js
-│   └── Manager.test.js
-├── dist/                  // rendered output (HTML) and CSS style sheet      
-├── lib/                   // classes
-├── src/                   // template helper code 
-├── .gitignore             // indicates which folders and files Git should ignore
-├── index.js               // runs the application
-└── package.json           
-~~~
-
-## Getting Started
-
-~~~
-The application should have a db.json file on the back end that will be used to store and retrieve notes using the fs module.
-
-The following HTML routes should be created:
-
-GET /notes should return the notes.html file.
-
-GET * should return the index.html file.
-
-The following API routes should be created:
-
-GET /api/notes should read the db.json file and return all saved notes as JSON.
-
-POST /api/notes should receive a new note to save on the request body, add it to the db.json file, and then return the new note to the client. You'll need to find a way to give each note a unique id when it's saved (look into npm packages that could do this for you).
-~~~
-
-## Bonus
-
-~~~
-You haven’t learned how to handle DELETE requests, but this application has that functionality in the front end. As a bonus, see if you can add the DELETE route to the application using the following guideline:
-
-DELETE /api/notes/:id should receive a query parameter containing the id of a note to delete. In order to delete a note, you'll need to read all notes from the db.json file, remove the note with the given id property, and then rewrite the notes to the db.json file.
-~~~
