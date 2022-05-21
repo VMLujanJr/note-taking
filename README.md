@@ -7,7 +7,7 @@ Welcome to the Note Taking project!
 
 An application that allows a user to create, save, edit, and delete notes using API endpoints.
 
-You may visit the deployed [website](https://VMLujanJr.github.io/note-taking/) to try it out for yourself!
+You may visit the deployed [website](https://shielded-shelf-02439.herokuapp.com/) to try it out for yourself!
 
 ## Table of Contents
 
